@@ -118,4 +118,35 @@ def arr09():
     print(arr)
 # arr09()
 def arr10():
-    
+    arr = [2,2,1,2,2,3,3]
+    hmap = {}
+    for i in arr:
+        if i in hmap:
+            hmap[i]+=1
+        else:
+            hmap[i]=1
+        if hmap[i]>len(arr)//2:
+            print("yes")
+            return
+    print("No")
+# arr10()
+def arr11():
+    arr = [1,1,1,2,2,6,6,4,5,6,6,6,6,6,6,6,8]
+    c=0
+    e=0
+    for i in range(len(arr)):
+        if c==0:
+            c=1
+            e = arr[i]
+        elif arr[i]==e:
+            c+=1
+        else:
+            c-=1
+    co = 0
+    for i in range(len(arr)):
+        if arr[i]==e:
+            co+=1
+    if co> len(arr)//2:
+        return e
+    return -1
+# print(arr11())
